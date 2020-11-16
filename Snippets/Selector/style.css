@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    color: #fff; /*Text main color*/
+    font-family: sans-serif; /*Bold text (sans-serif  [no edges])*/
+    line-height: 1.2; /*Main Line Height (120%)*/
+}
+
+/*---------------*/
+/*Options UX*/
+/*---------------*/
+
+main { /*Form box main width/length of view*/
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+/*Placemet*/
+    /*Flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+form { /*Placement/Position everything relative to form*/
+    position: relative;
+}
+
+#form-drop {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.option-selector { /*Main selector for options (drop-down)*/
+/*Customization drop-down box*/
+    background-color: rgb(30, 30, 30);
+    padding: 1rem;
+    width: 300px;
+    -webkit-user-select: none;
+/*Placemet*/
+    /*Flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    /*Positioning box*/
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.option-selector > ion-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.select {
+/*Placement Positioning box*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+/*Select grid customization, and styling*/
+    /*Grid*/
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    /*Styling*/
+        background-color: rgb(30, 30, 30);
+        width: 300px;
+        -webkit-user-select: none;
+}
+
+.select > .option {
+/*Styling*/
+    background-color: rgb(30, 30, 30);
+    width: 300px;
+    padding: 1rem;
+/*Placement*/
+    /*Flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+/*Hover & Active state*/
+.option:active, .option:hover { background-color: rgb(50, 50, 50); }
+label:active, label:hover { cursor: pointer; }
+ion-icon:active, ion-icon:hover  { cursor: pointer; }
+
+/*Display none toggle class (select)*/
+.display-select {
+    display: none;
+}

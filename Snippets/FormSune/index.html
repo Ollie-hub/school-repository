@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+<form id="form" class="form" method="GET">
+
+<!-- Grid form container -->
+    <div class="form-contianer">
+    <!--  input -->
+        <div class="field">
+            <input type="text" id="name" class="input" placeholder=" " />
+            <label for="name" class="label">Name</label>
+        </div>
+    <!-- Email input -->
+        <div class="field">
+            <input type="text" id="email" class="input" placeholder=" " />
+            <label for="email" class="label">Email</label>
+            <div id="emailError">*Email must contain a @ and a dot*</div>
+        </div>
+    <!-- Password input -->
+        <div class="field">
+            <input type="password" id="password" class="input" placeholder=" " />
+            <label for="password" class="label">Password</label>
+        </div>
+    <!-- Option slector -->
+        <div class="option-container">
+            <div class="option-selector" id="form-drop">
+                <label for="selector" id="selectInneHtml">What is your gender</label>
+                <ion-icon name="arrow-down-outline"></ion-icon>
+            </div>
+        <!-- Selector class & grid for options drop-down -->
+                <div class="select display-select" id="select"></div>
+    <!-- Option-container div ending -->
+        </div>
+    <!-- Form-container div ending -->
+    </div>
+<!-- Submit buttons -->
+    <div class="buttons">
+        <button type="submit" id="button-submit">Send</button>
+        <button type="submit" id="button-cancel">Cancel</button>
+    </div>
+</form>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/*Grids || Col and Row system*/
+
+/*Manual*/
+/*Du kan bruge disse grids ved at skrive dem ind i dine Html classses, det er nemt og hurtigt at bruge dette, og kan spare tid*/
+/*You can always resize these in the main css, or change it in here, also these are resposive.*/
+/*Husk og skrive ind om du vil have det i fr, eller auto*/
+
+/*col står for Column*/
+/*row står for Row*/
+
+/*Note: Det går kun op til 6 col's og row's*/
+
+/*-------*/
+/*1 Column and 1 Row*/
+
+.col-fr { /*Displays grid 1 column 1fr*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-fr { /*Displays grid 1 row 1fr*/
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.col-auto { /*Displays grid 1 column auto*/
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.row-auto { /*Displays grid 1 row auto*/
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/*-------*/
+/*2 Column and 1 Row*/
+
+.col-fr-2-of-6 { /*Displays grid 2 column 2fr*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-fr-2-of-6 { /*Displays grid 2 row 2fr*/
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.col-auto-2-of-6 { /*Displays grid 2 column auto*/
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.row-auto-2-of-6 { /*Displays grid 2 row auto*/
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/*Colum and row grids 2 1200px*/
+@media (max-width: 1200px) {
+
+.col-fr-2-of-6 { /*Displays grid 2 column 2fr*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-fr-2-of-6 { /*Displays grid 2 row 2fr*/
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.col-auto-2-of-6 { /*Displays grid 2 column auto*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-auto-2-of-6 { /*Displays grid 2 row auto*/
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+}
+
+/*Colum and row grids 2 815px*/
+@media (max-width: 815px) {
+
+.col-fr-2-of-6 { /*Displays grid 2 column 2fr*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-fr-2-of-6 { /*Displays grid 2 row 2fr*/
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.col-auto-2-of-6 { /*Displays grid 2 column auto*/
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.row-auto-2-of-6 { /*Displays grid 2 row auto*/
+    display: grid;
+    grid-template-columns: auto auto;
+}
+}
+
+/*-------*/
+/*3 Column and 1 Row*/
+
+.col-fr-3-of-6 { /*Displays grid 3 column 3fr*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-fr-3-of-6 { /*Displays grid 3 row 3fr*/
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.col-auto-3-of-6 { /*Displays grid 3 column auto*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.row-auto-3-of-6 { /*Displays grid 3 row auto*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+/*Colum and row grids 3 1200px*/
+@media (max-width: 1200px) {
+
+.col-fr-3-of-6 { /*Displays grid 3 column 3fr*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-fr-3-of-6 { /*Displays grid 3 row 3fr*/
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.col-auto-3-of-6 { /*Displays grid 3 column auto*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-auto-3-of-6 { /*Displays grid 3 row auto*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+}
+
+/*Colum and row grids 3 815px*/
+@media (max-width: 815px) {
+
+.col-fr-3-of-6 { /*Displays grid 3 column 3fr*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-fr-3-of-6 { /*Displays grid 3 row 3fr*/
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.col-auto-3-of-6 { /*Displays grid 3 column auto*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-auto-3-of-6 { /*Displays grid 3 row auto*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+}
+
+/*-------*/
+/*4 Column and 1 Row*/
+
+.col-fr-4-of-6 { /*Displays grid 4 column 4fr*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.row-fr-4-of-6 { /*Displays grid 4 row 4fr*/
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.col-auto-4-of-6 { /*Displays grid 4 column auto*/
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.row-auto-4-of-6 { /*Displays grid 4 row auto*/
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+/*Colum and row grids 4 1200px*/
+@media (max-width: 1200px) {
+
+.col-fr-4-of-6 { /*Displays grid 4 column 4fr*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-fr-4-of-6 { /*Displays grid 4 row 4fr*/
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.col-auto-4-of-6 { /*Displays grid 4 column auto*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row-auto-4-of-6 { /*Displays grid 4 row auto*/
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+}
+
+/*Colum and row grids 4 815px*/
+@media (max-width: 815px) {
+
+.col-fr-4-of-6 { /*Displays grid 4 column 4fr*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-fr-4-of-6 { /*Displays grid 4 row 4fr*/
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.col-auto-4-of-6 { /*Displays grid 4 column auto*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-auto-4-of-6 { /*Displays grid 4 row auto*/
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+}
+
+/*-------*/
+/*5 Column and 1 Row*/
+
+.col-fr-5-of-6 { /*Displays grid 5 column 5fr*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.row-fr-5-of-6 { /*Displays grid 5 row 5fr*/
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.col-auto-5-of-6 { /*Displays grid 5 column auto*/
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+.row-auto-5-of-6 { /*Displays grid 5 row auto*/
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+/*Colum and row grids 5 1200px*/
+@media (max-width: 1200px) {
+
+.col-fr-5-of-6 { /*Displays grid 5 column 5fr*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-fr-5-of-6 { /*Displays grid 5 row 5fr*/
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.col-auto-5-of-6 { /*Displays grid 5 column auto*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-auto-5-of-6 { /*Displays grid 5 row auto*/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+}
+
+/*Colum and row grids 5 815px*/
+@media (max-width: 815px) {
+
+.col-fr-5-of-6 { /*Displays grid 5 column 5fr*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-fr-5-of-6 { /*Displays grid 5 row 5fr*/
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.col-auto-5-of-6 { /*Displays grid 5 column auto*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-auto-5-of-6 { /*Displays grid 5 row auto*/
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+}
+
+/*-------*/
+/*6 Column and 1 Row*/
+
+.col-fr-6-of-6 { /*Displays grid 6 column 3fr*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.row-fr-6-of-6 { /*Displays grid 6 row 3fr*/
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.col-auto-6-of-6 { /*Displays grid 6 column auto*/
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+.row-auto-6-of-6 { /*Displays grid 6 row auto*/
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+/*Colum and row grids 6 1200px*/
+@media (max-width: 1200px) {
+
+.col-fr-6-of-6 { /*Displays grid 6 column 6fr*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-fr-6-of-6 { /*Displays grid 6 row 6fr*/
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.col-auto-6-of-6 { /*Displays grid 6 column auto*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-auto-6-of-6 { /*Displays grid 6 row auto*/
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+}
+
+/*Colum and row grids 6 815px*/
+@media (max-width: 815px) {
+
+.col-fr-6-of-6 { /*Displays grid 6 column 6fr*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-fr-6-of-6 { /*Displays grid 6 row 6fr*/
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.col-auto-6-of-6 { /*Displays grid 6 column auto*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.row-auto-6-of-6 { /*Displays grid 6 row auto*/
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+}

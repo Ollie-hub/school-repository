@@ -1,0 +1,193 @@
+/*general for menu (things that doesn't change)*/
+#page-navigation {
+    position: sticky;
+    width: 100%;
+    background-color: white;
+    z-index: 900;
+    display: flex;
+    align-items: center; /*Align items center of page-navigation*/
+    box-shadow: 0px 3px 50px black;
+    top: 0px;
+}
+.menu {
+    list-style: none;
+}
+    .listItem {
+        padding: 5px 20px;
+    }
+        .listItem a {
+            text-decoration: none;
+            color: white;
+    }
+
+
+#burgerMenu {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    right: 8vw;
+}
+
+@media screen and (max-width: 666px) { /*portrait phone (666px and down)*/
+    #burgerMenu {
+        font-size: 1em;
+    }
+
+    #page-navigation {
+        height: 10vh;
+    }
+        .menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(000, 000, 000, 0.3);
+            right: 0px;
+            top: 10vh; /*equal to navigation height*/
+            height: 90vh; /*equal to 100vh - navigation height*/
+            width: 100%;
+            visibility: hidden;
+        }
+            .listItem a{
+                font-size: 1.5em;
+            }
+                .menu-active {
+                    visibility: visible;
+                }
+}
+
+@media screen and (min-width: 667px) { /*landscape phone (667px and up)*/
+    #burgerMenu {
+        font-size: 1em;
+    }
+    
+    #page-navigation {
+        height: 20vh;
+    }
+        .menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(000, 000, 000, 0.3);
+            right: 0px;
+            top: 10vh; /*equal to navigation height*/
+            height: 90vh; /*equal to 100vh - navigation height*/
+            width: 100%;
+            visibility: hidden;
+        }
+            .listItem a{
+                font-size: 1.5em;
+            }
+                .menu-active {
+                    visibility: visible;
+                }
+}
+
+@media screen and (min-width: 768px) { /*portrait tablets (768px and up)*/
+    #burgerMenu {
+        font-size: 2em;
+    }
+    
+    #page-navigation {
+        height: 15vh;
+    }
+        .menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(000, 000, 000, 0.3);
+            right: 0px;
+            top: 10vh; /*equal to navigation height*/
+            height: 90vh; /*equal to 100vh - navigation height*/
+            width: 100%;
+            visibility: hidden;
+        }
+            .listItem a{
+                font-size: 2.5em;
+            }
+                .menu-active {
+                    visibility: visible;
+                }
+}
+
+@media screen and (min-width: 1024px) { /*landscape tablets (1024px and up)*/
+    #burgerMenu {
+        font-size: 2em;
+    }
+    
+    #page-navigation {
+        height: 15vh;
+    }
+        .menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(000, 000, 000, 0.3);
+            right: 0px;
+            top: 10vh; /*equal to navigation height*/
+            height: 90vh; /*equal to 100vh - navigation height*/
+            width: 100%;
+            visibility: hidden;
+        }
+            .listItem a{
+                font-size: 2.5em;
+            }
+                .menu-active {
+                    visibility: visible;
+                }
+}
+
+@media screen and (min-width: 1200px) { /*laptop/desctop (1200px and up)*/
+    #burgerMenu {
+        display: none;
+    }
+
+    #page-navigation {
+        height: 20vh;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        width: auto;
+        height: auto;
+        font-size: 3vh;
+        right: 4vw;
+        top: unset; /*this will remove the previous fixed top position*/
+        background-color: transparent;
+        visibility: visible;
+    }
+
+    .listItem {
+        border-left: 1px solid black;
+    }
+        .listItem a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.5vw;
+        }
+            .listItem:hover, .listItem a:hover {
+                color: #48AAF0;
+            }
+                .listItem:first-child, :last-child{
+                    border: none;
+                }
+                    .listItem:last-child, .listItem:last-child a{
+                        background-color: #48AAF0;
+                        color: white;
+                        border-radius: 20px;
+                    }
+                    .listItem:last-child:hover {
+                        transform: scale(1.05);
+                    }
+}
+
+
+

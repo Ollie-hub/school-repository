@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Form Validering</title>
+</head>
+<body>
+<h1>Form Validering</h1>
+<form id="contactform" method="POST">
+    <fieldset>
+        <label for="firstname">Fornavn</label>
+        <input data-validate="onlyalpha" class="required" type="text" name="firstname" id="firstname" placeholder="Indtast dit fornavn" value="" />
+        <label for="lastname">Efternavn</label>
+        <input data-validate="onlyalpha" type="text" name="lastname" id="lastname" placeholder="Indtast dit efternavn" value="" />
+        <label for="email">Email</label>
+        <input data-validate="validemail" type="email" name="email" id="email" placeholder="Indtast din email" value="" />
+        <label for="email">Telefon</label>
+        <input data-validate="onlynum" type="text" name="phone" id="phone" placeholder="Indtast dit telefonnummer" value="" />
+        <label for="comment">Kommentar</label>
+        <textarea name="comment" id="comment" placeholder="Indtast kommentar"></textarea>
+        <label for="accept">Jeg accepterer:</label>
+        <input type="checkbox" name="accept" id="accept">
+        <button type="button" onclick="validate(this.form)">Vis input</button>
+    </fieldset>
+</form>
+
+<script src="/js/main.js"></script>
+
+</body>
+</html

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); 
+
+* {
+    font-family: 'Open Sans' ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #666;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    color: #4b4b4b;
+    margin: 1.2em 0 .5em 0;
+}
+
+.content {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 10px;
+    border: solid 1px #eee;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: .9em;
+    font-weight: normal;
+    border-right:1px solid #fff ;
+}
+
+th {
+    background-color: #eee;
+    white-space: nowrap;
+}
+
+td:first-child {
+    color: royalblue;
+    white-space: nowrap;
+}
+
+p, td {
+    line-height: 1.5;
+}
+
+.inline-code {
+    padding: 1px 5px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+pre {
+    margin: 10px 0;
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 10px;
+    line-height: 18px;
+    background-color: #edf3f8;
+    font-size: 14px;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button.info {
+    background-color: #538fcd;
+    color: #fff;
+}
+
+.area-buttons {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+$vanilla-calendar-bg-color: #fff;
+$vanilla-calendar-border-radius: 5px;
+$vanilla-calendar-border-color: #e7e9ed;
+$vanilla-calendar-today-bg-color: #e7e9ed;
+$vanilla-calendar-today-color: #333;
+$vanilla-calendar-selected-bg-color: #538fcd;
+$vanilla-calendar-selected-color: #fff;
+$vanilla-calendar-selected-radius: 5px;
+
+.vanilla-calendar *, .vanilla-calendar *:before, .vanilla-calendar .vanilla-calendar-calendar *:after{
+    box-sizing: border-box;
+
+}
+
+.vanilla-calendar {
+    background-color: $vanilla-calendar-bg-color;
+    border-radius: $vanilla-calendar-border-radius ;
+    border: solid 1px $vanilla-calendar-border-color;
+    box-shadow: 0 4px 22px 0 rgba (0, 0, 0, 0.05);
+    margin: 0 auto;
+    overflow: hidden;
+    width: 350px;
+
+    .vanilla-calendar-btn{
+    
+        user-select: none;
+        -webkit-appearance: button;
+        background: none;
+        border: 0;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        line-height: normal;
+        min-width: 27px;
+        outline: none;
+        overflow: visible;
+        padding: 0;
+        text-align: center;
+        &:active {
+            border-radius: $vanilla-calendar-border-radius;
+            box-shadow: 0 0 0 2px rgba($vanilla-calendar-today-bg-color, $alpha: 0.1);
+        }
+    }
+
+    .vanilla-calendar-header {
+        align-items: center;
+        display: flex;
+        padding: 10px;
+        text-transform: uppercase;
+
+        svg {
+            fill: $vanilla-calendar-today-color;
+        }
+
+        &__label {
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        } 
+    }
+        .vanilla-calendar-week {
+            background-color: $vanilla-calendar-selected-color;
+            display: flex;
+            flex-wrap: wrap;
+       
+
+        span {
+            color: $vanilla-calendar-selected-color;
+            flex-direction: column;
+            flex: 0 0 14.28%;
+            font-size: 1em;
+            font-weight: bold;
+            max-width: 14.28%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &-body {
+        background-color: rgba($vanilla-calendar-selected-bg-color, 1.0);
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 14.28%;
+        max-width: 14.28%;
+        padding: 10px 0;
+    }
+
+    &-date {
+        align-items: center;
+        background-color: #fff;
+        border-radius: $vanilla-calendar-border-radius;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 14.28%;
+        max-width: 14.28%;
+        padding: 10px 0;
+
+        &--active {
+            cursor: pointer;
+        }
+
+        &--today {
+            background-color: $vanilla-calendar-today-bg-color;
+            color: $vanilla-calendar-today-color;
+        }
+
+        &--selected {
+            background-color: $vanilla-calendar-selected-bg-color;
+            color: $vanilla-calendar-selected-color;
+        }
+
+        &--disabled {
+            border-radius: 0;
+            cursor: not-allowed;
+            opacity: 0.2;
+        }
+
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .vanilla-calendar {
+        width: auto;
+    }
+} 

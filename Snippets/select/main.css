@@ -1,0 +1,48 @@
+/*INPUT CONTAINER*/
+.field {
+    position: relative;
+}
+
+/*INPUT SELECT*/
+#select {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2; /*SETS ABOVE SPAN*/
+}
+
+/*CHECKBOX CUSTOMIZATION*/
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+/*CHECKMARK INSIDE CHECKBOX*/
+.checkbox::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: #eee;
+    clip-path: polygon(20% 20%, 30% 50%, 70% 0, 100% 0, 45% 70%, 20% 100%, 0 40%);
+    display: none;
+}
+
+/*WHEN INPUT IS CHECKED CHANGE SPAN BACKGROUND COLOR*/
+input:checked ~ .checkbox {
+    background-color: rgb(31, 121, 255);
+}
+
+/*WHEN INPUT FIELD IS CHCKED DISPLAY CHECKMARK BLOCK*/
+input:checked ~ .checkbox::after {
+    display: block;
+}
