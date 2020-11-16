@@ -6,7 +6,7 @@
         }*/ 
 
         // Arrow function
-        addToTen = (num) => {
+        const addToTen = (num) => {
             return 10 + num;
         }
 
@@ -37,7 +37,7 @@
         }*/
 
         // Arrow function
-        sum = (a, b) => {
+        const sum = (a, b) => {
             return a + b;
         }
 
