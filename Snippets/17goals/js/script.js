@@ -1,13 +1,36 @@
-async function fetchData() {
-    let response = await fetch('https://api.mediehuset.net/sdg/goals');
-    let data = await response.json(); 
+    // Model 
+    let myFetchedData = loadData('https://api.mediehuset.net/sdg/goals');
 
-    return data.result;
-}; 
+    // Controller
+    function loadData(uri){
+        fetch(uri)
 
-goals = () => {
+        .then((response) => {
+            return response.json();
+        })
 
-    goalsHTML += 
-    `
-    `
-}
+        .then((data) => {
+            let myData = data.items[0]; 
+            let id = data.id;
+            let title = data.title; 
+            let byline = data.byline;
+            let color = data.color; 
+            let icon = data.icon; 
+            buildView(id, title, byline, color, icon);
+        })
+
+        .catch();
+    };
+
+    // View
+
+    let widget = document.getElementById('goals');
+
+    buildView = (id, title, byline, color, icon) => {
+        
+        widget.innerHTML = `
+        <h1 class="goal-title">${title}</h1>
+        <p> class="goal-content">${byline}<p>
+        <span>${icon}</span> 
+        `
+    };
