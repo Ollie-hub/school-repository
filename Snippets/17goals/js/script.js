@@ -30,7 +30,7 @@
         
         widget.innerHTML = `
         <h1 class="goal-title">${title}</h1>
-        <p> class="goal-content">${byline}<p>
+        <pclass="goal-content"> ${byline}<p>
         <span>${icon}</span> 
         `
     };
