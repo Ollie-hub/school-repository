@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   display: -ms-grid;
   display: grid;
@@ -9,18 +14,41 @@ body {
 .goals {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 50% 25% auto;
+      grid-template-rows: 50% 25% auto;
   height: 45vh;
   margin: 20px;
-  border: 1px solid;
   padding: 20px;
 }
 
 .goals svg {
-  height: 15vh;
+  height: 20vh;
   fill: #fff;
+  margin: auto;
+}
+
+.goals .header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% auto;
+      grid-template-columns: 5% auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.goals .id {
+  font-size: 1.5vw;
+}
+
+.goals .title {
+  font-size: 1.5vw;
+  margin-left: 15px;
 }
 
 .goals .byline {
-  width: 70%;
-  font-size: 1.2rem;
+  font-size: 1vw;
+  color: #fff;
+  width: 80%;
 }

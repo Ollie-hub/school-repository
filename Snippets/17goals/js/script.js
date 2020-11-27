@@ -46,8 +46,10 @@
 
             goalshtml.innerHTML = `
             ${icon}
+            <div class="header">
             <div class="id">${id+'.'}</div>
             <h2 class="title">${title}</h2> 
+            </div>
             <div class="byline">${byline}</div>
             `;
             goalshtml.addEventListener('click', () => {
