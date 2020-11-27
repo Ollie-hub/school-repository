@@ -1,1 +1,25 @@
-/* No CSS */
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.goals {
+  display: -ms-grid;
+  display: grid;
+  height: 45vh;
+  margin: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+
+.goals svg {
+  height: 15vh;
+  fill: #fff;
+}
+
+.goals .byline {
+  width: 70%;
+}
