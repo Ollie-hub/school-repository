@@ -52,3 +52,10 @@ body {
   color: #fff;
   width: 80%;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
