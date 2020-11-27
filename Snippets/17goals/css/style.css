@@ -9,6 +9,7 @@ body {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   padding: 20px;
+  background-color: #252525;
 }
 
 .goals {
@@ -36,14 +37,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-}
-
-.goals .id {
   font-size: 1.5vw;
 }
 
 .goals .title {
-  font-size: 1.5vw;
   margin-left: 15px;
 }
 
@@ -57,5 +54,14 @@ body {
   body {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+  }
+  .goals svg {
+    height: 30vw;
+  }
+  .goals .header {
+    font-size: 4.5vw;
+  }
+  .goals .byline {
+    font-size: 4vw;
   }
 }

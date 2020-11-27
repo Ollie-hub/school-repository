@@ -8,6 +8,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
+    background-color: #252525;
 }
 
 .goals {
@@ -27,13 +28,10 @@ body {
         grid-template-columns: 5% auto;
         align-items: center;
         color: #fff;
-    }
-    .id {
         font-size: 1.5vw;
     }
 
     .title {
-        font-size: 1.5vw;
         margin-left: 15px;
     }
 
@@ -47,5 +45,20 @@ body {
 @media screen and (max-width: 600px) {
     body {
         grid-template-columns: auto;
+    }
+
+    .goals {
+
+        svg {
+            height: 30vw;
+        }
+
+        .header {
+            font-size: 4.5vw;
+        }
+
+        .byline {
+            font-size: 4vw;
+        }
     }
   }
