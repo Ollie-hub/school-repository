@@ -18,23 +18,20 @@
         .catch();
     };
 
-    // function loadDetails(id){
-    //     fetch('https://api.mediehuset.net/sdg/goals/' + `${id}`)
-
-    //     .then((response) => {
-    //         return response.json();
-    //     })
-
-    //     .then((data) => {
-    //         let myDetails = data.item; 
-    //         buildView(myDetails);
-    //     })
-
-    //     .catch();
-    // };
+    function loadDetails(goal) {
+        fetch(`https://api.mediehuset.net/sdg/goals/${goal}`)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            let dataDetails = data.item;
+            return dataDetails.item;
+        })
+        .catch();
+    }
 
     // View
-    buildView = (goaldata) => {
+    buildView = async (goaldata) => {
 
         goaldata.forEach(element => {
         
@@ -46,17 +43,15 @@
 
             goalshtml.innerHTML = `
             ${icon}
-            <div class="header">
             <div class="id">${id+'.'}</div>
             <h2 class="title">${title}</h2> 
-            </div>
             <div class="byline">${byline}</div>
             `;
+
             goalshtml.addEventListener('click', () => {
-                
-                console.log(id)
-            }) 
+                let details = loadDetails(id);
 
-
+                console.log(details);
+            })
         });
     };
